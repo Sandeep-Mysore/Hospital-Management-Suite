@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>    
+<title>Register</title>
+<!-- meta_tags-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Library Membership form A Flat Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+	function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta_tag_Keywords-->
+<!--css_files-->
+	<link rel="stylesheet" href="/static/css/jquery-ui2.css"/>
+	<link href="/static/css/style2.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-->
+	<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+	<link rel="stylesheet" href="/static/css/font-awesome.css"><!--font_wesome_icons-->
+	<link href="//fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="//fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+	<link rel="stylesheet" href="/static/css/button.css">
+<!--//css_files-->
+</head>
+<body>
+<a href = "/"><div class="btn from-bottom" style="text-align: center"> HOME </div></a>
+<div class="w3l-head">
+<h1>Register kiya toh life Jingalala</h1>															
+</div>
+<div class="w3ls-form">
+<form action="/register" method="post">
+		<div class="w3l-last-grid1">
+			<div class="w3l-grid1">
+				<label class="text">First name</label>
+				<div class="w3l-div">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<input type="text" name="firstname" id="fname" placeholder="first name" required=""/>
+				</div>
+			</div> 
+			<div class="w3l-grid2">
+			<label class="text">Last name</label>
+			<div class="w3l-div">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" name="lastname" id="lname" placeholder="last name" required=""/>
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>	
+		<div class="w3l-last-grid1">
+			<div class="w3l-grid1">
+				<label class="text">gender</label>
+				<div class="w3l-div">
+					<i class="fa fa-users" aria-hidden="true"></i>
+					<select name="gender" class="form-control" required="">
+						<option>gender</option>
+						<option value = "Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</div>
+			</div>	
+			<div class="w3l-grid2">
+				<label class="text">date of birth</label>
+				<div class="w3l-div">
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+					<input type="text" class="date" id="datepicker" name="dob" placeholder="dob" value="MM/DD/YYYY" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'MM/DD/YYYY';}" required=""/>
+				</div>	
+			</div>	
+			<div class="clear"></div>
+		</div>
+		<div class="w3l-last-grid1">
+			<div class="w3l-grid1">
+				<label class="text">Your Email</label>
+				<div class="w3l-div">
+					<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					<input type="email" name="email" id="emailid" placeholder="e-mail" required=""/>
+				</div>
+			</div>
+			<div class="w3l-grid2">
+				<label class="text">phone number</label>
+				<div class="w3l-div">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<input type="text" name="contact_no" id="contactno" placeholder="phone number" required=""/>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="w3l-last-grid1">
+			<div class="w3l-grid1">	
+				<label class="text">Username</label>
+				<div class="w3l-div">
+					<!-- <i class="fa fa-location-arrow" aria-hidden="true"></i> -->
+					<input type="text" name="username" id="uname" onblur="check_username()" placeholder="Username" required=""/>
+				</div>
+			</div>
+			<div class="w3l-grid2">	
+				<label class="text">Password</label>
+				<div class="w3l-div">
+					<input type="password" name="password" id="password" placeholder="Password" required=""/>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="w3l-right-grid1">
+			<div class="w3l-grid1">
+				<label class="text">Repeat Password</label>
+				<div class="w3l-div">
+					<input type="password" name="repassword" id="repassword" onblur="check_password()" placeholder="Repeat password" required=""/>
+				</div>
+			</div>
+			<div class="w3l-grid2">
+				<div class="">
+					<br/>
+					<br/>
+					<input class= "hidden" id="errorbox" type="text" style="color:red;" value="" readonly/>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="w3l-right-grid1">
+		<div class="w3l-grid">
+			<div class="w3l-div">
+				<div id="image" class="btn from-top" onclick="startWebcam()">Capture Image</div>
+				<!-- <button id="image" onclick="startWebcam()">Capture Image</button> -->
+			</div>
+		</div>	
+		<div class="w3l-right-grid1">
+			<div class="w3l-grid2">
+				<!-- <div class="w3l-div"> -->
+					<video onclick="snapshot(this);" width=400 height=350 id="video"  autoplay></video>
+				<!-- </div> -->
+			</div>
+		</div>
+		<div class="w3l-right-grid1">
+			<div class="w3l-grid2">
+				
+				<canvas id="myCanvas" width="400" height="350" style="display: none"></canvas>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+		<div class="w3ls-submit">
+			<input type="text" id="im" name="image" style="display:none">
+			<input type="submit" value="add a member">
+		</div>
+</form>
+</div>
+
+<script type="text/javascript" src="/static/js/register.js"></script>
+<!-- Default-JavaScript --> <script type="text/javascript" src="/static/js/jquery-2.2.3.min.js"></script>
+
+<!-- Calendar -->
+<script src="/static/js/jquery-ui.js"></script>
+	<script>
+		$(function() {
+		$( "#datepicker,#datepicker1" ).datepicker();
+		});
+	</script>
+<!-- //Calendar -->
+</body>
+</html>

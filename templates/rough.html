@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            Rough
+        </title>
+        <script>
+            alert("{{ url_for('sse.stream') }}")
+            var source = new EventSource("{{ url_for('sse.stream') }}");
+            source.addEventListener('greeting', function(event) {
+                var data = JSON.parse(event.data);
+                // do what you want with this data
+                div = document.getElementById("msg")
+                div.innerHTML += data + "<br/>"
+            }, false);
+        </script>
+    </head>
+    <body>
+        <div id="msg">
+
+        </div>
+    </body>
+</html>
