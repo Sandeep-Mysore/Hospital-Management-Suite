@@ -1,0 +1,15 @@
+header{
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+table td{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: 5px solid grey;
+}
+
+table{
+  margin: auto;
+}
